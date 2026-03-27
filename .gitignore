@@ -1,0 +1,28 @@
+.DS_Store
+**/.DS_Store
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# local runtime data
+data/*.db
+state/state.json
+logs/*.log
+reports/*.html
+exports/*.xlsx
+exports/*.png
+exports/*.html
+output/
+tmp/
+releases/
+HH Monitor.app/
+logs/
+data/
+state/
+
+# env
+.env

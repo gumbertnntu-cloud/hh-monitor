@@ -1,0 +1,1914 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "HH Monitor UI",
+      "width": 1560,
+      "height": 1060,
+      "fill": "#0A0A0B",
+      "layout": "vertical",
+      "gap": 12,
+      "padding": 16,
+      "children": [
+        {
+          "type": "frame",
+          "id": "OeMIC",
+          "name": "HeaderBar",
+          "width": "fill_container",
+          "height": 104,
+          "fill": "#141417",
+          "cornerRadius": 12,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#2A2A2E"
+          },
+          "gap": 12,
+          "padding": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "GddYB",
+              "name": "Brand",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "srmFB",
+                  "name": "title1",
+                  "layout": "horizontal",
+                  "gap": 10,
+                  "height": "hug_content",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "hhBg1",
+                      "name": "hhBadge",
+                      "width": 44,
+                      "height": 44,
+                      "fill": "#FF2D20",
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "alignX": "center",
+                      "alignY": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "hhTx1",
+                          "name": "hhText",
+                          "fill": "#FFFFFF",
+                          "content": "hh",
+                          "fontFamily": "SF Pro (SFNS)",
+                          "fontSize": 28,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "hmTx1",
+                      "name": "titleText",
+                      "fill": "#FFFFFF",
+                      "content": "ороший сканер",
+                      "fontFamily": "SF Pro (SFNS)",
+                      "fontSize": 28,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.8
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "Wwy1L",
+                  "name": "sub1",
+                  "fill": "#6B6B70",
+                  "content": "Fast-поиск обновляет выдачу, deep-dive работает только по очереди",
+                  "fontFamily": "SF Pro (SFNS)",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "SXeLL",
+              "name": "Top Chips",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "E13KR",
+                  "name": "chip1",
+                  "fill": "#FF5C0018",
+                  "cornerRadius": 100,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000066",
+                    "offset": {
+                      "x": 0,
+                      "y": 2
+                    },
+                    "blur": 6
+                  },
+                  "padding": [
+                    4,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "93ljp",
+                      "name": "chip1t",
+                      "fill": "#FF5C00",
+                      "content": "Авторизация",
+                      "fontFamily": "SF Pro (SFNS)",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "B1Z5P",
+                  "name": "chip2",
+                  "fill": "#FF5C0018",
+                  "cornerRadius": 100,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000066",
+                    "offset": {
+                      "x": 0,
+                      "y": 2
+                    },
+                    "blur": 6
+                  },
+                  "padding": [
+                    4,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "REElK",
+                      "name": "chip2t",
+                      "fill": "#FF5C00",
+                      "content": "Очередь deep-dive: 0",
+                      "fontFamily": "SF Pro (SFNS)",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aIXKO",
+                  "name": "chip3",
+                  "fill": "#FF5C0018",
+                  "cornerRadius": 100,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000066",
+                    "offset": {
+                      "x": 0,
+                      "y": 2
+                    },
+                    "blur": 6
+                  },
+                  "padding": [
+                    4,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Dggym",
+                      "name": "chip3t",
+                      "fill": "#FF5C00",
+                      "content": "Экспорт XLS",
+                      "fontFamily": "SF Pro (SFNS)",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "sm55C",
+          "name": "Main",
+          "width": "fill_container",
+          "height": "fill_container",
+          "gap": 12,
+          "children": [
+            {
+              "type": "frame",
+              "id": "oBvcJ",
+              "name": "Sidebar",
+              "width": 350,
+              "height": "fill_container",
+              "fill": "#141417",
+              "cornerRadius": 12,
+              "stroke": {
+                "align": "inside",
+                "thickness": {
+                  "left": 1
+                },
+                "fill": "#FF5C00"
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 14,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "LjGQA",
+                  "name": "sideTitle2",
+                  "fill": "#FFFFFF",
+                  "content": "Параметры поиска",
+                  "fontFamily": "SF Pro (SFNS)",
+                  "fontSize": 20,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "jNLws",
+                  "name": "sideHint2",
+                  "fill": "#6B6B70",
+                  "content": "1) Поиск -> 2) Отметка deep-dive -> 3) Запуск deep-dive",
+                  "fontFamily": "SF Pro (SFNS)",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "ozNhC",
+                  "name": "posLabel2",
+                  "fill": "#6B6B70",
+                  "content": "Целевые позиции (/)",
+                  "fontFamily": "SF Pro (SFNS)",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "ynZBK",
+                  "name": "posBox2",
+                  "width": "fill_container",
+                  "height": 72,
+                  "fill": "#111113",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#2A2A2E"
+                  },
+                  "padding": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Gowd7",
+                      "name": "posText2",
+                      "fill": "#8B8B90",
+                      "content": "директор по трансформации/chief of staff",
+                      "fontFamily": "SF Pro (SFNS)",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "yhuuC",
+                  "name": "blockLabel2",
+                  "fill": "#6B6B70",
+                  "content": "Блокеры (/)",
+                  "fontFamily": "SF Pro (SFNS)",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "xfrZ2",
+                  "name": "blockBox2",
+                  "width": "fill_container",
+                  "height": 96,
+                  "fill": "#111113",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#2A2A2E"
+                  },
+                  "padding": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "o72UD",
+                      "name": "blockText2",
+                      "fill": "#8B8B90",
+                      "content": "стажер/junior/без опыта",
+                      "fontFamily": "SF Pro (SFNS)",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "F0Suc",
+                  "name": "pagesLabel2",
+                  "fill": "#6B6B70",
+                  "content": "Макс. страниц",
+                  "fontFamily": "SF Pro (SFNS)",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "1h5Ek",
+                  "name": "pagesBox2",
+                  "width": "fill_container",
+                  "height": 38,
+                  "fill": "#111113",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#2A2A2E"
+                  },
+                  "padding": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "RgEXe",
+                      "name": "pagesText2",
+                      "fill": "#8B8B90",
+                      "content": "10",
+                      "fontFamily": "SF Pro (SFNS)",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "QaM2u",
+                  "name": "ageLabel2",
+                  "fill": "#6B6B70",
+                  "content": "Возраст вакансий",
+                  "fontFamily": "SF Pro (SFNS)",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "rLYJU",
+                  "name": "ageBox2",
+                  "width": "fill_container",
+                  "height": 38,
+                  "fill": "#111113",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#2A2A2E"
+                  },
+                  "padding": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "akq7j",
+                      "name": "ageText2",
+                      "fill": "#8B8B90",
+                      "content": "30",
+                      "fontFamily": "SF Pro (SFNS)",
+                      "fontSize": 12,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KNGOP",
+                  "name": "fastBtn2",
+                  "width": "fill_container",
+                  "height": 40,
+                  "fill": "#2E4B42",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#4B6E62"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000066",
+                    "offset": {
+                      "x": 0,
+                      "y": 2
+                    },
+                    "blur": 8
+                  },
+                  "padding": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "HtWrY",
+                      "name": "fastBtnText2",
+                      "fill": "#D9EAE3",
+                      "content": "Запустить поиск",
+                      "fontFamily": "SF Pro (SFNS)",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gxhUi",
+                  "name": "deepBtn2",
+                  "width": "fill_container",
+                  "height": 40,
+                  "fill": "#6B5724",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#8B7230"
+                  },
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#00000066",
+                    "offset": {
+                      "x": 0,
+                      "y": 2
+                    },
+                    "blur": 8
+                  },
+                  "padding": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MPVjd",
+                      "name": "deepBtnText2",
+                      "fill": "#F3E2B3",
+                      "content": "Запустить deep-dive",
+                      "fontFamily": "SF Pro (SFNS)",
+                      "fontSize": 13,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "QE2VS",
+              "name": "Content",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "OWnsx",
+                  "name": "split3",
+                  "width": "fill_container",
+                  "height": 290,
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "63uyE",
+                      "name": "mainTable3",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": "#141417",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#1F1F23"
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "4YiFw",
+                          "name": "mainTitle3",
+                          "fill": "#FFFFFF",
+                          "content": "Найденные вакансии (fast)",
+                          "fontFamily": "SF Pro (SFNS)",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "jJrMH",
+                          "name": "searchExcelTableV2",
+                          "width": "fill_container",
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#2A2A2E"
+                          },
+                          "layout": "vertical",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "zUpsX",
+                              "width": "fill_container",
+                              "height": 28,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "nETPD",
+                                  "name": "hdr",
+                                  "width": 64,
+                                  "height": "fill_container",
+                                  "fill": "#17171A",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": 6,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "ioKC3",
+                                      "fill": "#CFCFD4",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "DR",
+                                      "textAlign": "center",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "700"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "b9G2i",
+                                  "width": 222.73,
+                                  "height": "fill_container",
+                                  "fill": "#17171A",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "Fd2Mg",
+                                      "fill": "#CFCFD4",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Название",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "700"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "OI5lD",
+                                  "width": 89.09,
+                                  "height": "fill_container",
+                                  "fill": "#17171A",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "R1Ii1",
+                                      "fill": "#CFCFD4",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Компания",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "700"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "H1XNd",
+                                  "width": 89.09,
+                                  "height": "fill_container",
+                                  "fill": "#17171A",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "EgeAI",
+                                      "fill": "#CFCFD4",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Город",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "700"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "Y28jE",
+                                  "width": 89.09,
+                                  "height": "fill_container",
+                                  "fill": "#17171A",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "XHvoY",
+                                      "fill": "#CFCFD4",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Ссылка",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "700"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "zA5cQ",
+                              "width": "fill_container",
+                              "height": 30,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "PK6Dg",
+                                  "name": "r1",
+                                  "width": 64,
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "0LyZk",
+                                      "width": 34,
+                                      "height": 18,
+                                      "fill": "#2E4B42",
+                                      "cornerRadius": 100,
+                                      "padding": 2,
+                                      "justifyContent": "end",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "ellipse",
+                                          "id": "OvTdD",
+                                          "fill": "#E8F4EE",
+                                          "width": 14,
+                                          "height": 14
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "rS2eT",
+                                  "width": 222.73,
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "b22eE",
+                                      "fill": "#ADADB0",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Chief of Staff",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "nRzqJ",
+                                  "width": 89.09,
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "oFPZl",
+                                      "fill": "#ADADB0",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "RetailLab",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "EsKrs",
+                                  "width": 89.09,
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "zFNZv",
+                                      "fill": "#ADADB0",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "СПб",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "xshI8",
+                                  "name": "row1",
+                                  "width": 89.09,
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "gap": 6,
+                                  "padding": [
+                                    4,
+                                    6
+                                  ],
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "MhyEN",
+                                      "height": 18,
+                                      "fill": "#243321",
+                                      "cornerRadius": 6,
+                                      "stroke": {
+                                        "align": "inside",
+                                        "thickness": 1,
+                                        "fill": "#3A5A32"
+                                      },
+                                      "padding": [
+                                        2,
+                                        6
+                                      ],
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "AaIwR",
+                                          "fill": "#D8ECD1",
+                                          "content": "copy",
+                                          "fontFamily": "SF Pro (SFNS)",
+                                          "fontSize": 9,
+                                          "fontWeight": "600"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "TGOaG",
+                                      "height": 18,
+                                      "fill": "#1D2736",
+                                      "cornerRadius": 6,
+                                      "stroke": {
+                                        "align": "inside",
+                                        "thickness": 1,
+                                        "fill": "#324966"
+                                      },
+                                      "padding": [
+                                        2,
+                                        6
+                                      ],
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "E0U3H",
+                                          "fill": "#D5E4F8",
+                                          "content": "open",
+                                          "fontFamily": "SF Pro (SFNS)",
+                                          "fontSize": 9,
+                                          "fontWeight": "600"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "dnoYw",
+                              "width": "fill_container",
+                              "height": 30,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "0GOC0",
+                                  "name": "r2",
+                                  "width": 64,
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "DVMSU",
+                                      "width": 34,
+                                      "height": 18,
+                                      "fill": "#2E4B42",
+                                      "cornerRadius": 100,
+                                      "padding": 2,
+                                      "justifyContent": "end",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "ellipse",
+                                          "id": "7Z2A9",
+                                          "fill": "#E8F4EE",
+                                          "width": 14,
+                                          "height": 14
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "qwMCa",
+                                  "width": 222.73,
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "0DfXc",
+                                      "fill": "#ADADB0",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Исполнительный директор",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "edRDk",
+                                  "width": 89.09,
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "MwxMR",
+                                      "fill": "#ADADB0",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "FinGroup",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "77zXC",
+                                  "width": 89.09,
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "j1yzH",
+                                      "fill": "#ADADB0",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Москва",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "1E5oj",
+                                  "name": "row2",
+                                  "width": 89.09,
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "gap": 6,
+                                  "padding": [
+                                    4,
+                                    6
+                                  ],
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "sGS4b",
+                                      "height": 18,
+                                      "fill": "#243321",
+                                      "cornerRadius": 6,
+                                      "stroke": {
+                                        "align": "inside",
+                                        "thickness": 1,
+                                        "fill": "#3A5A32"
+                                      },
+                                      "padding": [
+                                        2,
+                                        6
+                                      ],
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "hY1rC",
+                                          "fill": "#D8ECD1",
+                                          "content": "copy",
+                                          "fontFamily": "SF Pro (SFNS)",
+                                          "fontSize": 9,
+                                          "fontWeight": "600"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "yuuvN",
+                                      "height": 18,
+                                      "fill": "#1D2736",
+                                      "cornerRadius": 6,
+                                      "stroke": {
+                                        "align": "inside",
+                                        "thickness": 1,
+                                        "fill": "#324966"
+                                      },
+                                      "padding": [
+                                        2,
+                                        6
+                                      ],
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "qDqjK",
+                                          "fill": "#D5E4F8",
+                                          "content": "open",
+                                          "fontFamily": "SF Pro (SFNS)",
+                                          "fontSize": 9,
+                                          "fontWeight": "600"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "pPnov",
+                              "width": "fill_container",
+                              "height": 30,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "j2YDd",
+                                  "name": "r3",
+                                  "width": 64,
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "zzh73",
+                                      "width": 34,
+                                      "height": 18,
+                                      "fill": "#3A3A3F",
+                                      "cornerRadius": 100,
+                                      "padding": 2,
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "ellipse",
+                                          "id": "UCzaw",
+                                          "fill": "#C8C8CD",
+                                          "width": 14,
+                                          "height": 14
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "YVo9X",
+                                  "width": 222.73,
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "7m44H",
+                                      "fill": "#ADADB0",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "COO (Operations)",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "A8Uta",
+                                  "width": 89.09,
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "Iyc1V",
+                                      "fill": "#ADADB0",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "TechHolding",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "07qzP",
+                                  "width": 89.09,
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "YnvEy",
+                                      "fill": "#ADADB0",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Казань",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "1YkJZ",
+                                  "name": "row3",
+                                  "width": 89.09,
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "gap": 6,
+                                  "padding": [
+                                    4,
+                                    6
+                                  ],
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "frame",
+                                      "id": "Tq6Vh",
+                                      "height": 18,
+                                      "fill": "#243321",
+                                      "cornerRadius": 6,
+                                      "stroke": {
+                                        "align": "inside",
+                                        "thickness": 1,
+                                        "fill": "#3A5A32"
+                                      },
+                                      "padding": [
+                                        2,
+                                        6
+                                      ],
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "dJtSY",
+                                          "fill": "#D8ECD1",
+                                          "content": "copy",
+                                          "fontFamily": "SF Pro (SFNS)",
+                                          "fontSize": 9,
+                                          "fontWeight": "600"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "frame",
+                                      "id": "dNbpU",
+                                      "height": 18,
+                                      "fill": "#1D2736",
+                                      "cornerRadius": 6,
+                                      "stroke": {
+                                        "align": "inside",
+                                        "thickness": 1,
+                                        "fill": "#324966"
+                                      },
+                                      "padding": [
+                                        2,
+                                        6
+                                      ],
+                                      "justifyContent": "center",
+                                      "alignItems": "center",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "id": "UTGuP",
+                                          "fill": "#D5E4F8",
+                                          "content": "open",
+                                          "fontFamily": "SF Pro (SFNS)",
+                                          "fontSize": 9,
+                                          "fontWeight": "600"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "4LDJJ",
+                          "name": "collectToDeepBtn",
+                          "height": 28,
+                          "fill": "#1A2533",
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#2F4761"
+                          },
+                          "gap": 6,
+                          "padding": [
+                            4,
+                            10
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "kkFwx",
+                              "name": "downBadge",
+                              "width": 18,
+                              "height": 18,
+                              "fill": "#25384D",
+                              "cornerRadius": 100,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "HFo8z",
+                                  "name": "arr",
+                                  "fill": "#B7D3F3",
+                                  "content": "↓",
+                                  "fontFamily": "SF Pro (SFNS)",
+                                  "fontSize": 11,
+                                  "fontWeight": "700"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "60vfu",
+                              "name": "lbl",
+                              "fill": "#D8E8FA",
+                              "content": "deep-dive",
+                              "fontFamily": "SF Pro (SFNS)",
+                              "fontSize": 11,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "MdJVN",
+                          "name": "mainActions3",
+                          "fill": "#6B6B70",
+                          "content": "Включите тумблеры и нажмите кнопку «↓ deep-dive», чтобы собрать таблицу ниже.",
+                          "fontFamily": "SF Pro (SFNS)",
+                          "fontSize": 11,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "va2IN",
+                      "name": "detail3",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": "#141417",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#1F1F23"
+                      },
+                      "layout": "vertical",
+                      "gap": 6,
+                      "padding": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "fJj3X",
+                          "name": "detailTitle3",
+                          "fill": "#FFFFFF",
+                          "content": "Полное описание (наведение на строку deep-dive)",
+                          "fontFamily": "SF Pro (SFNS)",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "vublR",
+                          "name": "detailBody3",
+                          "fill": "#ADADB0",
+                          "content": "Вакансия: Chief of Staff\nКомпания: RetailLab\nЗП: 520k\nЛокация: СПб\nКлючевые задачи:\n- Операционное управление\n- Взаимодействие с CEO\nИзменения после deep-dive:\n- salary: 490k -> 520k\n- обновлено описание\nURL: hh.ru/vacancy/...",
+                          "fontFamily": "SF Pro (SFNS)",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ry4ZC",
+                  "name": "deepRow4",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "HtY9J",
+                      "name": "queue4",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": "#141417",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#1F1F23"
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "bU1Cg",
+                          "name": "queueTitle4",
+                          "fill": "#FFFFFF",
+                          "content": "Результат deep-dive",
+                          "fontFamily": "SF Pro (SFNS)",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "sXjMy",
+                          "name": "queueExcelTableV2",
+                          "width": "fill_container",
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#2A2A2E"
+                          },
+                          "layout": "vertical",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "WesVb",
+                              "width": "fill_container",
+                              "height": 28,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "VWdR8",
+                                  "width": "fill_container",
+                                  "height": "fill_container",
+                                  "fill": "#17171A",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "7kRaq",
+                                      "fill": "#CFCFD4",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Вакансия",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "700"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "MEJPj",
+                                  "width": "fill_container",
+                                  "height": "fill_container",
+                                  "fill": "#17171A",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "NSsEY",
+                                      "fill": "#CFCFD4",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Компания",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "700"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "cAQFJ",
+                                  "width": "fill_container",
+                                  "height": "fill_container",
+                                  "fill": "#17171A",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "R6fad",
+                                      "fill": "#CFCFD4",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Дата",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "700"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "5UFy9",
+                              "width": "fill_container",
+                              "height": 30,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "YAKpB",
+                                  "width": "fill_container",
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "b5DCp",
+                                      "fill": "#ADADB0",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Chief of Staff",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "RCofo",
+                                  "width": "fill_container",
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "IKG1e",
+                                      "fill": "#ADADB0",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "RetailLab",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "9j9JN",
+                                  "width": "fill_container",
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "jWBn9",
+                                      "fill": "#ADADB0",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "18:03",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Vtinb",
+                              "width": "fill_container",
+                              "height": 30,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "98S8n",
+                                  "width": "fill_container",
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "1MZID",
+                                      "fill": "#ADADB0",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "Исполнительный директор",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "lK21m",
+                                  "width": "fill_container",
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "s9nCd",
+                                      "fill": "#ADADB0",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "FinGroup",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "k8gVA",
+                                  "width": "fill_container",
+                                  "height": "fill_container",
+                                  "fill": "#111113",
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1,
+                                    "fill": "#2A2A2E"
+                                  },
+                                  "padding": [
+                                    6,
+                                    8
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "pkLug",
+                                      "fill": "#ADADB0",
+                                      "textGrowth": "fixed-width",
+                                      "width": "fill_container",
+                                      "content": "17:58",
+                                      "fontFamily": "SF Pro (SFNS)",
+                                      "fontSize": 10,
+                                      "fontWeight": "500"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "oyWsw",
+                          "name": "queueActions4",
+                          "fill": "#6B6B70",
+                          "content": "Эта таблица собирается кнопкой «↓ deep-dive» из отмеченных вакансий.",
+                          "fontFamily": "SF Pro (SFNS)",
+                          "fontSize": 11,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "LD5X3",
+                      "name": "results4",
+                      "width": "fill_container",
+                      "height": "fill_container",
+                      "fill": "#141417",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#1F1F23"
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "m3ffG",
+                          "name": "resultsTitle4",
+                          "fill": "#FFFFFF",
+                          "content": "Подробности вакансии",
+                          "fontFamily": "SF Pro (SFNS)",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "uXFyu",
+                          "name": "vacancyStructuredText",
+                          "width": "fill_container",
+                          "height": "fill_container",
+                          "fill": "#111113",
+                          "cornerRadius": 10,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1,
+                            "fill": "#2A2A2E"
+                          },
+                          "layout": "vertical",
+                          "gap": 8,
+                          "padding": [
+                            10,
+                            12
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "JC3yg",
+                              "name": "sourceLabel",
+                              "fill": "#6B6B70",
+                              "content": "Данные с hh.ru (deep-dive)",
+                              "fontFamily": "SF Pro (SFNS)",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "y673H",
+                              "name": "vacancyBody",
+                              "fill": "#D0D0D4",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Вакансия: Chief of Staff\nКомпания: RetailLab\nСсылка: hh.ru/vacancy/22491\nЗарплата: 520 000 ₽\nФормат: офис, Санкт-Петербург\n\nОбязанности:\n- координация операционных задач CEO\n- контроль кросс-функциональных инициатив\n- подготовка еженедельных executive-отчетов\n\nТребования:\n- опыт в роли Chief of Staff / BizOps от 3 лет\n- сильные навыки коммуникации и приоритизации\n- системное мышление и управление дедлайнами\n\nУсловия:\n- ДМС после испытательного срока\n- годовой бонус по KPI\n\nОбновлено: 18:03",
+                              "lineHeight": 1.25,
+                              "fontFamily": "SF Pro (SFNS)",
+                              "fontSize": 12,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "wSj4s",
+                  "name": "logsBottom",
+                  "width": "fill_container",
+                  "height": 96,
+                  "fill": "#000000",
+                  "cornerRadius": 10,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#1F1F23"
+                  },
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "8xUVJ",
+                      "name": "logTitle",
+                      "fill": "#ADADB0",
+                      "content": "Логи",
+                      "fontFamily": "SF Pro (SFNS)",
+                      "fontSize": 11,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "8tX1h",
+                      "name": "logRows",
+                      "fill": "#8B8B90",
+                      "content": "18:03 deep-dive queue: empty\n18:04 pin received: vacancy_id=22491\n18:04 deep-dive started for vacancy_id=22491\n18:05 deep-dive finished: status=updated\n18:05 sync completed",
+                      "fontFamily": "SF Pro (SFNS)",
+                      "fontSize": 10,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

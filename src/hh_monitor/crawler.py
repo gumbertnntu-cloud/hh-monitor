@@ -9,10 +9,12 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
-from playwright.sync_api import Error as PlaywrightError
-from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
-from playwright.sync_api import sync_playwright
-
+from .browser_support import (
+    PlaywrightError,
+    PlaywrightTimeoutError,
+    require_browser_automation,
+    sync_playwright,
+)
 from .models import Vacancy
 from .parser import parse_search_results, parse_vacancy_detail
 from .utils import random_delay
@@ -100,6 +102,7 @@ def crawl_vacancies(
     logger: logging.Logger,
     progress_callback: Callable[[str], None] | None = None,
 ) -> tuple[list[Vacancy], CrawlStats]:
+    require_browser_automation()
     stats = CrawlStats()
     items: list[Vacancy] = []
     now = datetime.now()
@@ -200,6 +203,7 @@ def crawl_vacancy_details(
     logger: logging.Logger,
     progress_callback: Callable[[str], None] | None = None,
 ) -> tuple[list[Vacancy], CrawlStats]:
+    require_browser_automation()
     stats = CrawlStats()
     if not vacancies:
         return [], stats

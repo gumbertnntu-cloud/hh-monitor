@@ -4,8 +4,13 @@ import logging
 import time
 from pathlib import Path
 
-from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
-from playwright.sync_api import sync_playwright
+from .browser_support import (
+    BrowserAutomationUnavailableError,
+    PlaywrightTimeoutError,
+    browser_automation_available,
+    browser_automation_reason,
+    sync_playwright,
+)
 
 LOGIN_SELECTORS = [
     'a[data-qa="login"]',
@@ -23,6 +28,9 @@ def _has_login_cta(page: object) -> bool:
 def validate_state(base_url: str, state_path: Path, logger: logging.Logger) -> bool:
     if not state_path.exists():
         logger.info("state file is missing: %s", state_path)
+        return False
+    if not browser_automation_available():
+        logger.info("state validation skipped: %s", browser_automation_reason())
         return False
 
     try:
@@ -54,6 +62,8 @@ def validate_state(base_url: str, state_path: Path, logger: logging.Logger) -> b
 
 
 def interactive_auth(base_url: str, state_path: Path, logger: logging.Logger) -> bool:
+    if not browser_automation_available():
+        raise BrowserAutomationUnavailableError(browser_automation_reason())
     state_path.parent.mkdir(parents=True, exist_ok=True)
     timeout_sec = 10 * 60
     start = time.monotonic()

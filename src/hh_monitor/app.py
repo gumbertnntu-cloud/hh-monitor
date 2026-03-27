@@ -65,6 +65,7 @@ if __package__ in {None, ""}:
     sys.path.insert(0, str(package_parent))
 
 from hh_monitor.auth import interactive_auth, validate_state
+from hh_monitor.browser_support import browser_automation_available, browser_automation_reason
 from hh_monitor.export_xlsx import export_ui_tables_xlsx
 from hh_monitor.logging_conf import configure_logging
 from hh_monitor.models import ChangeRow, SeenVacancyRow, Vacancy
@@ -105,7 +106,7 @@ HELP_TEXT = """HH Monitor — короткая инструкция
 
 2) Авторизация в hh.ru
 - Нажмите «Авторизоваться»
-- Откроется Chromium, войдите в аккаунт hh.ru вручную
+- Если сборка поддерживает browser fallback, откроется Chromium
 - После входа сессия сохранится в state/state.json
 - В интерфейсе state должен стать valid
 
@@ -468,7 +469,11 @@ class MainWindow(QMainWindow):
         title.setObjectName("HeaderTitle")
         title.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
         title.setFixedHeight(42)
-        subtitle = QLabel("Fast-поиск идет через API, browser fallback запускается автоматически")
+        if browser_automation_available():
+            subtitle_text = "Fast-поиск идет через API, browser fallback запускается автоматически"
+        else:
+            subtitle_text = "Fast-поиск идет через API, browser fallback отключен в этой сборке"
+        subtitle = QLabel(subtitle_text)
         subtitle.setObjectName("HeaderSub")
         title_row.addWidget(hh_badge, 0, Qt.AlignVCenter)
         title_row.addWidget(title, 0, Qt.AlignVCenter)
@@ -1102,8 +1107,16 @@ class MainWindow(QMainWindow):
             return raw
 
     def _refresh_state_status(self) -> None:
+        if not browser_automation_available():
+            self.auth_btn.setDisabled(True)
+            self.auth_btn.setToolTip(browser_automation_reason())
+            self._set_auth_button_state(False)
+            self._append_log("state: browser automation unavailable in this build")
+            return
         state_path = self.ctx.project_root / self.ctx.settings.paths.state_path
         is_valid = validate_state(self.ctx.settings.search.base_url, state_path, self.ctx.logger)
+        self.auth_btn.setDisabled(False)
+        self.auth_btn.setToolTip("")
         self._set_auth_button_state(is_valid)
         status = "valid" if is_valid else "missing/expired"
         self._append_log(f"state: {status}")
@@ -1115,8 +1128,8 @@ class MainWindow(QMainWindow):
         self.auth_btn.update()
 
     def _set_busy(self, busy: bool) -> None:
+        self.auth_btn.setDisabled(busy or not browser_automation_available())
         for btn in [
-            self.auth_btn,
             self.preview_btn,
             self.export_btn,
             self.help_btn,
@@ -1519,7 +1532,8 @@ class MainWindow(QMainWindow):
         if isinstance(result, Vacancy):
             self.vacancy_cache[vacancy_id] = result
         self.deep_session_invalid = False
-        self._set_auth_button_state(True)
+        if browser_automation_available():
+            self._set_auth_button_state(True)
         state.status = "done"
         state.error = ""
         state.finished_at = self._now_iso()
@@ -2300,6 +2314,14 @@ class MainWindow(QMainWindow):
         )
 
     def on_auth_clicked(self) -> None:
+        if not browser_automation_available():
+            QMessageBox.information(
+                self,
+                "Browser fallback disabled",
+                "В этой portable-сборке browser fallback и авторизация отключены. "
+                "Поиск работает только через HH API.",
+            )
+            return
         self._append_log("Запуск интерактивной авторизации...")
         self._set_busy(True)
         state_path = self.ctx.project_root / self.ctx.settings.paths.state_path
@@ -2429,7 +2451,8 @@ class MainWindow(QMainWindow):
         self.vacancy_cache.clear()
         self.last_change_rows = run_result.rows
         self.deep_session_invalid = False
-        self._set_auth_button_state(True)
+        if browser_automation_available():
+            self._set_auth_button_state(True)
 
         if self.last_run_mode == "fast":
             self._reset_deep_state()
@@ -2445,6 +2468,8 @@ class MainWindow(QMainWindow):
             self._populate_main_table(visible_rows)
             for row in self.main_source_rows:
                 if row.data_source_status not in {"fallback_needed", "api_detail_failed"}:
+                    continue
+                if not browser_automation_available():
                     continue
                 self._enqueue_deep(row.vacancy_id)
         else:

@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from .auth import validate_state
+from .browser_support import browser_automation_available, browser_automation_reason
 from .crawler import CrawlStats, crawl_vacancy_details
 from .filters import filter_vacancy, match_exclude_keywords
 from .hh_api import HHApiClient, vacancy_needs_browser_dd
@@ -74,6 +75,16 @@ def fetch_single_vacancy_detail(
         updated = vacancy
 
     if vacancy_needs_browser_dd(updated):
+        if not browser_automation_available():
+            logger.info(
+                "browser fallback skipped for %s: %s",
+                vacancy_id,
+                browser_automation_reason(),
+            )
+            updated.data_source_status = "fallback_needed"
+            updated.normalized_hash = _compute_hash(updated)
+            upsert_vacancy(db_path=db_path, vacancy=updated, seen_at=datetime.utcnow())
+            return updated
         if not validate_state(settings.search.base_url, state_path, logger):
             raise SessionInvalidError(
                 "Session state is missing or expired. Run authorization first."
@@ -276,6 +287,13 @@ def _enrich_queued_vacancies(
             enriched.append(updated)
 
     if browser_queue:
+        if not browser_automation_available():
+            logger.info(
+                "browser fallback skipped for queued vacancies: %s",
+                browser_automation_reason(),
+            )
+            enriched.extend(browser_queue)
+            return enriched, stats
         if not validate_state(base_url, state_path, logger):
             raise SessionInvalidError(
                 "Session state is missing or expired. Run authorization first."

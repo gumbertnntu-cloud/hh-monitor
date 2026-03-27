@@ -1,7 +1,8 @@
 param(
   [string]$PythonExe = "python",
   [string]$Name = "HH Monitor",
-  [switch]$Clean
+  [switch]$Clean,
+  [switch]$IncludeBrowser
 )
 
 $ErrorActionPreference = "Stop"
@@ -23,30 +24,44 @@ try {
   & $PythonExe -m pip install --upgrade pip | Out-Host
 
   Write-Host "[build] Install dependencies"
-  & $PythonExe -m pip install -r requirements.txt pyinstaller | Out-Host
+  $requirements = Get-Content requirements.txt | Where-Object {
+    $line = $_.Trim()
+    $line -and
+    (-not $line.StartsWith("#")) -and
+    ($IncludeBrowser -or (-not $line.StartsWith("playwright", [System.StringComparison]::OrdinalIgnoreCase)))
+  }
+  & $PythonExe -m pip install @requirements pyinstaller | Out-Host
 
-  Write-Host "[build] Install Playwright Chromium into package-local path"
-  $env:PLAYWRIGHT_BROWSERS_PATH = "0"
-  & $PythonExe -m playwright install chromium | Out-Host
+  if ($IncludeBrowser) {
+    Write-Host "[build] Install Playwright Chromium into package-local path"
+    $env:PLAYWRIGHT_BROWSERS_PATH = "0"
+    & $PythonExe -m playwright install chromium | Out-Host
+  }
 
   $cleanArgs = @()
   if ($Clean) {
     $cleanArgs = @("--clean")
   }
 
-  & $PythonExe -m PyInstaller `
-    --noconfirm `
-    --onefile `
-    --windowed `
-    --name "$Name" `
-    --paths "src" `
-    --collect-all "playwright" `
-    --collect-all "pydantic" `
-    --collect-all "pydantic_core" `
-    --collect-all "bs4" `
-    --collect-all "lxml" `
-    @cleanArgs `
-    "$Entry" | Out-Host
+  $pyInstallerArgs = @(
+    "-m", "PyInstaller",
+    "--noconfirm",
+    "--onefile",
+    "--windowed",
+    "--name", "$Name",
+    "--paths", "src",
+    "--collect-all", "pydantic",
+    "--collect-all", "pydantic_core",
+    "--collect-all", "bs4",
+    "--collect-all", "lxml"
+  )
+  if ($IncludeBrowser) {
+    $pyInstallerArgs += @("--collect-all", "playwright")
+  }
+  $pyInstallerArgs += $cleanArgs
+  $pyInstallerArgs += "$Entry"
+
+  & $PythonExe @pyInstallerArgs | Out-Host
 
   $Output = Join-Path $ProjectRoot "dist\$Name.exe"
   if (-not (Test-Path $Output)) {
